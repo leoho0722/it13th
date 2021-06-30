@@ -1,5 +1,4 @@
-# IT2021
-IT 邦 Swift 30 天挑戰－【從零到新手的 Swift iOS 開發】
+# IT 邦 Swift 30 天挑戰－【從零到新手的 Swift iOS 開發】
 
 目錄：
 
