@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19129"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="ClosureSendValueDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="aWf-k1-SNx" id="dSp-am-Sjx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U97-0J-JTK">
+                    <rect key="frame" x="114.66666666666669" y="404.66666666666669" width="161" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="跳頁到 SecondVC"/>
+                    <connections>
+                        <action selector="pushToSecondVC:" destination="-1" eventType="touchUpInside" id="VGK-Ro-pbk"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入內容" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aWf-k1-SNx">
+                    <rect key="frame" x="95" y="187" width="200" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="RpP-OK-hhC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="U97-0J-JTK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4Vr-1f-gxw"/>
+                <constraint firstItem="aWf-k1-SNx" firstAttribute="centerX" secondItem="U97-0J-JTK" secondAttribute="centerX" id="MHH-cM-mpp"/>
+                <constraint firstItem="aWf-k1-SNx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="95" id="Mcv-nT-0tW"/>
+                <constraint firstItem="aWf-k1-SNx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="143" id="gCK-lf-YgO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aWf-k1-SNx" secondAttribute="trailing" constant="95" id="kIN-VA-dWC"/>
+                <constraint firstItem="U97-0J-JTK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tpo-Su-BXm"/>
+            </constraints>
+            <point key="canvasLocation" x="67.692307692307693" y="110.90047393364928"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
