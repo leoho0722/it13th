@@ -1,7 +1,7 @@
 # 第 13 屆 IT 邦鐵人賽－【在 iOS 開發路上的大小事】
 ## 文章網址：
 1. [HackMD](https://hackmd.io/@leoho0722/r1ywFhE-F)
-2. iT 邦
+2. IT 邦
 ## 目錄：
 ### Day01～Day02 (無想法階段，0%)
 * Day01：先裝個 Xcode 開發環境壓壓驚
