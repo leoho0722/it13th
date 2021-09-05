@@ -1,10 +1,10 @@
 # IT 邦 Swift 30 天挑戰－【從零到新手的 Swift iOS 開發】
 
-目錄：
+### 目錄：
 
 Day1：先裝個 Xcode 開發環境壓壓驚
 
-Day2：Swift 的一些基礎
+Day2：
 
 Day3：
 
