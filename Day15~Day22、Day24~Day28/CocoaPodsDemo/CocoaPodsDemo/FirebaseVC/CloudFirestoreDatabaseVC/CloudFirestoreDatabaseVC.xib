@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CloudFirestoreDatabaseVC" customModule="CocoaPodsDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="messageContentTV" destination="U4t-Ky-cdM" id="jf4-qx-eDb"/>
+                <outlet property="messagePeopleTF" destination="Ica-aZ-Kuv" id="A2d-ue-alJ"/>
+                <outlet property="messageTableView" destination="Bey-iA-7Wq" id="RKl-IY-QDB"/>
+                <outlet property="sendBtn" destination="n19-nO-Ppk" id="Qu5-cj-WqY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-iA-7Wq">
+                    <rect key="frame" x="0.0" y="510" width="390" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Okc-qN-Czx"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="78P-oE-Eon"/>
+                        <outlet property="delegate" destination="-1" id="TtO-c6-O3O"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留言人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-aY-CKW">
+                    <rect key="frame" x="16" y="74" width="52" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-aZ-Kuv">
+                    <rect key="frame" x="76" y="67" width="298" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留言內容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkN-Rv-yEp">
+                    <rect key="frame" x="16" y="109" width="70" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n19-nO-Ppk" customClass="CustomButton" customModule="CocoaPodsDemo" customModuleProvider="target">
+                    <rect key="frame" x="274" y="462" width="100" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="OXD-9F-x9U"/>
+                        <constraint firstAttribute="height" constant="40" id="uwd-hH-xNO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="送出">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sendMessageToFirestoreDatabase:" destination="-1" eventType="touchUpInside" id="SfA-yK-R2L"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U4t-Ky-cdM">
+                    <rect key="frame" x="16" y="137" width="358" height="317"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9E-hY-WOn" customClass="CustomButton" customModule="CocoaPodsDemo" customModuleProvider="target">
+                    <rect key="frame" x="16" y="462" width="100" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="iUq-4q-9dM"/>
+                        <constraint firstAttribute="height" constant="40" id="lX0-zu-Xam"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="排序">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sortMessage:" destination="-1" eventType="touchUpInside" id="RvJ-Fl-CxW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ica-aZ-Kuv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="0xS-fH-FQC"/>
+                <constraint firstItem="Ica-aZ-Kuv" firstAttribute="leading" secondItem="6jF-aY-CKW" secondAttribute="trailing" constant="8" id="3H7-FW-EgB"/>
+                <constraint firstItem="6jF-aY-CKW" firstAttribute="leading" secondItem="SkN-Rv-yEp" secondAttribute="leading" id="3be-gw-SbR"/>
+                <constraint firstItem="6jF-aY-CKW" firstAttribute="centerY" secondItem="Ica-aZ-Kuv" secondAttribute="centerY" id="4ZV-iF-T6Y"/>
+                <constraint firstItem="M9E-hY-WOn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5Aq-V9-dH7"/>
+                <constraint firstItem="6jF-aY-CKW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="6JF-M4-eHR"/>
+                <constraint firstItem="Ica-aZ-Kuv" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="7gC-t1-tRd"/>
+                <constraint firstItem="SkN-Rv-yEp" firstAttribute="top" secondItem="Ica-aZ-Kuv" secondAttribute="bottom" constant="8" id="AUk-HC-uwK"/>
+                <constraint firstItem="SkN-Rv-yEp" firstAttribute="leading" secondItem="U4t-Ky-cdM" secondAttribute="leading" id="AlV-Xp-2Gt"/>
+                <constraint firstItem="Ica-aZ-Kuv" firstAttribute="trailing" secondItem="U4t-Ky-cdM" secondAttribute="trailing" id="Chb-WV-1Bt"/>
+                <constraint firstItem="Bey-iA-7Wq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="HEb-Aq-NfV"/>
+                <constraint firstItem="U4t-Ky-cdM" firstAttribute="top" secondItem="SkN-Rv-yEp" secondAttribute="bottom" constant="8" id="Qrf-2J-gHh"/>
+                <constraint firstItem="M9E-hY-WOn" firstAttribute="top" secondItem="U4t-Ky-cdM" secondAttribute="bottom" constant="8" symbolic="YES" id="bLl-PW-NlZ"/>
+                <constraint firstItem="n19-nO-Ppk" firstAttribute="top" secondItem="U4t-Ky-cdM" secondAttribute="bottom" constant="8" id="cEd-5M-N0b"/>
+                <constraint firstItem="Bey-iA-7Wq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dTx-yC-sao"/>
+                <constraint firstItem="U4t-Ky-cdM" firstAttribute="centerX" secondItem="Bey-iA-7Wq" secondAttribute="centerX" id="haz-8M-kJL"/>
+                <constraint firstItem="Bey-iA-7Wq" firstAttribute="top" secondItem="n19-nO-Ppk" secondAttribute="bottom" constant="8" id="nIz-g9-74c"/>
+                <constraint firstItem="U4t-Ky-cdM" firstAttribute="trailing" secondItem="n19-nO-Ppk" secondAttribute="trailing" id="prT-ra-7Th"/>
+            </constraints>
+            <point key="canvasLocation" x="106" y="78"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="n19-nO-Ppk">
+            <size key="intrinsicContentSize" width="41" height="36"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

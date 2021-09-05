@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInWithGoogleVC" customModule="CocoaPodsDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="linkToOtherAccountBtn" destination="F3l-rj-uuE" id="EEt-Md-Y5V"/>
+                <outlet property="signInWithGoogleBtn" destination="SUm-bi-VRq" id="y5f-Es-ykr"/>
+                <outlet property="signOutBtn" destination="428-wY-HXB" id="RfP-im-xDb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="428-wY-HXB" customClass="CustomButton" customModule="CocoaPodsDemo" customModuleProvider="target">
+                    <rect key="frame" x="145" y="224" width="100" height="50"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="KNL-Nd-X2b"/>
+                        <constraint firstAttribute="height" constant="50" id="ov9-mv-T8V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="帳號登出">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="googleAccountSignOut:" destination="-1" eventType="touchUpInside" id="0oy-pA-P4z"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUm-bi-VRq" customClass="GIDSignInButton">
+                    <rect key="frame" x="65" y="144" width="260" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5Ug-TR-r5L"/>
+                        <constraint firstAttribute="width" constant="260" id="rLU-60-IkK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="signInWithGoogle:" destination="-1" eventType="touchUpInside" id="jie-cF-iUl"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3l-rj-uuE" customClass="CustomButton" customModule="CocoaPodsDemo" customModuleProvider="target">
+                    <rect key="frame" x="90" y="304" width="210" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="210" id="Dpv-MU-5DJ"/>
+                        <constraint firstAttribute="height" constant="50" id="qWy-G3-ynY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="與其他帳號進行連結">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemBlueColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="linkToAccount:" destination="-1" eventType="touchUpInside" id="IfQ-H1-P0p"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="F3l-rj-uuE" firstAttribute="top" secondItem="428-wY-HXB" secondAttribute="bottom" constant="30" id="6YV-Z7-Oae"/>
+                <constraint firstItem="SUm-bi-VRq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="65" id="7bU-Ub-gSu"/>
+                <constraint firstItem="428-wY-HXB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="145" id="JmS-6t-0G6"/>
+                <constraint firstItem="SUm-bi-VRq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="WuV-8J-eth"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F3l-rj-uuE" secondAttribute="trailing" constant="90" id="XMP-7a-r8h"/>
+                <constraint firstItem="428-wY-HXB" firstAttribute="top" secondItem="SUm-bi-VRq" secondAttribute="bottom" constant="30" id="iJk-4Q-6oQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SUm-bi-VRq" secondAttribute="trailing" constant="65" id="lWX-Sy-TXL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="428-wY-HXB" secondAttribute="trailing" constant="145" id="pV4-lC-kyF"/>
+                <constraint firstItem="F3l-rj-uuE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="rjp-9b-rEt"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="121"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="428-wY-HXB">
+            <size key="intrinsicContentSize" width="82" height="36"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
