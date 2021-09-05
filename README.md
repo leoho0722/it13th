@@ -2,7 +2,7 @@
 **這裡只會放文章裡面的 Code，不會放其他的**
 ## 文章網址：
 1. [HackMD](https://hackmd.io/@leoho0722/r1ywFhE-F)
-2. IT 邦
+2. [IT 邦](https://ithelp.ithome.com.tw/users/20140363/ironman/4064)
 ## 目錄：
 ### Day01～Day02 (無想法階段，0%)
 * Day01：先裝個 Xcode 開發環境壓壓驚
