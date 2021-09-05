@@ -2,61 +2,33 @@
 
 ### 目錄：
 
-* Day1：先裝個 Xcode 開發環境壓壓驚
-* Day2：
-
-Day3：
-
-Day4：
-
-Day5：
-
-Day6：
-
-Day7：
-
-Day8：
-
-Day9：
-
-Day10：
-
-Day11：
-
-Day12：
-
-Day13：
-
-Day14：
-
-Day15：
-
-Day16：
-
-Day17：
-
-Day18：
-
-Day19：
-
-Day20：
-
-Day21：
-
-Day22：
-
-Day23：
-
-Day24：
-
-Day25：
-
-Day26：
-
-Day27：
-
-Day28：
-
-Day29：
-
-Day30：
+* Day 01：先裝個 Xcode 開發環境壓壓驚
+* Day 02：
+* Day 03：
+* Day 04：
+* Day 05：
+* Day 06：
+* Day 07：
+* Day 08：
+* Day 09：
+* Day 10：
+* Day 11：
+* Day 12：
+* Day 13：
+* Day 14：
+* Day 15：
+* Day 16：
+* Day 17：
+* Day 18：
+* Day 19：
+* Day 20：
+* Day 21：
+* Day 22：
+* Day 23：
+* Day 24：
+* Day 25：
+* Day 26：
+* Day 27：
+* Day 28：
+* Day 29：
+* Day 30：
